@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MBTI Grid</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="controls">
+      <button id="clear-images">CLEAR IMAGES</button>
+      <button id="check-all">CHECK ALL</button>
+      <button id="uncheck-all">UNCHECK ALL</button>
+      <div class="checkboxes">
+        <br><label><input type="checkbox" id="show-I" checked> Show Introverts (I)</label>
+        <label><input type="checkbox" id="show-E" checked> Show Extroverts (E)</label><br>
+        <label><input type="checkbox" id="show-S" checked> Show Sensors (S)</label>
+        <label><input type="checkbox" id="show-N" checked> Show Intuitioners (N)</label><br>
+        <label><input type="checkbox" id="show-T" checked> Show Thinkers (T)</label>
+        <label><input type="checkbox" id="show-F" checked> Show Feelers (F)</label><br>
+        <label><input type="checkbox" id="show-J" checked> Show Judgementalists (J)</label>
+        <label><input type="checkbox" id="show-P" checked> Show Perceptionists (P)</label><br>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="cell" data-type="I S T J" id="ISTJ" onclick="uploadImage('ISTJ')">
+        <div class="text">ISTJ</div>
+      </div>
+      <div class="cell" data-type="I S F J" id="ISFJ" onclick="uploadImage('ISFJ')">
+        <div class="text">ISFJ</div>
+      </div>
+      <div class="cell" data-type="I N F J" id="INFJ" onclick="uploadImage('INFJ')">
+        <div class="text">INFJ</div>
+      </div>
+      <div class="cell" data-type="I N T J" id="INTJ" onclick="uploadImage('INTJ')">
+        <div class="text">INTJ</div>
+      </div>
+      <div class="cell" data-type="I S T P" id="ISTP" onclick="uploadImage('ISTP')">
+        <div class="text">ISTP</div>
+      </div>
+      <div class="cell" data-type="I S F P" id="ISFP" onclick="uploadImage('ISFP')">
+        <div class="text">ISFP</div>
+      </div>
+      <div class="cell" data-type="I N F P" id="INFP" onclick="uploadImage('INFP')">
+        <div class="text">INFP</div>
+      </div>
+      <div class="cell" data-type="I N T P" id="INTP" onclick="uploadImage('INTP')">
+        <div class="text">INTP</div>
+      </div>
+      <div class="cell" data-type="E S T P" id="ESTP" onclick="uploadImage('ESTP')">
+        <div class="text">ESTP</div>
+      </div>
+      <div class="cell" data-type="E S F P" id="ESFP" onclick="uploadImage('ESFP')">
+        <div class="text">ESFP</div>
+      </div>
+      <div class="cell" data-type="E N F P" id="ENFP" onclick="uploadImage('ENFP')">
+        <div class="text">ENFP</div>
+      </div>
+      <div class="cell" data-type="E N T P" id="ENTP" onclick="uploadImage('ENTP')">
+        <div class="text">ENTP</div>
+      </div>
+      <div class="cell" data-type="E S T J" id="ESTJ" onclick="uploadImage('ESTJ')">
+        <div class="text">ESTJ</div>
+      </div>
+      <div class="cell" data-type="E S F J" id="ESFJ" onclick="uploadImage('ESFJ')">
+        <div class="text">ESFJ</div>
+      </div>
+      <div class="cell" data-type="E N F J" id="ENFJ" onclick="uploadImage('ENFJ')">
+        <div class="text">ENFJ</div>
+      </div>
+      <div class="cell" data-type="E N T J" id="ENTJ" onclick="uploadImage('ENTJ')">
+        <div class="text">ENTJ</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden File Input for Image Upload -->
+  <input type="file" id="fileInput" style="display: none;" onchange="handleFileUpload(event)">
+
+  <script src="script.js"></script>
+</body>
+</html>
