@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  width: 80%;
+  max-width: 800px;
+  aspect-ratio: 1; /* Ensure the grid is square */
+}
+
+.cell {
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s, opacity 0.3s;
+  overflow: hidden; /* Ensures content inside is clipped to maintain square shape */
+}
+
+.cell:hover {
+  transform: scale(1.05);
+}
+
+.text {
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+
+.cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Grid styling */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Adjust this based on how many columns you want */
+  grid-gap: 10px; /* Space between cells */
+}
+
+
+/* Centering the text */
+.text {
+  display: inline-block;
+  color: #000;
+}
+
+/* Optionally add hover effects or other styles */
+.cell:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  overflow: hidden; /* Prevents unwanted shifting */
+}
+
+.cell {
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s, opacity 0.3s;
+  overflow: hidden;
+  width: 100%; /* Ensures consistency */
+  height: 100%;
+}
+
+.cell img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Prevents cropping */
+  opacity: 0.7;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
